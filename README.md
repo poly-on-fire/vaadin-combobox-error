@@ -36,6 +36,4 @@ So you have to configure the `rewrite` rule properly and not to redirect 404 to 
 See also: https://github.com/Polymer/polymer-starter-kit/issues/941#issuecomment-257493920
 
 
-And this config looks good: https://github.com/Polymer/docs/issues/1755#issuecomment-249678734 (edited)
-
-Wow thanks Sergey. Wouldn't have found those if you had given me six weeks to search for them. Thanks. 
+And this config looks good: https://github.com/Polymer/docs/issues/1755#issuecomment-249678734 
