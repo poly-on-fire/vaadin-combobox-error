@@ -1,27 +1,24 @@
 # vaadin-combobox-error
 creation of the smallest (polymer starter-kit) project that I could to demo error for vaadin team
 
-## How to test it without deploying it
+## Diagnosis for problem when running in firebase hosting
 
-* go to https://df-lab.firebaseapp.com/
-* turn on chrome developer or whatever dev tool
-* notice no error
-* go to View Two in the menu
-* notice that view does not come up, console fills with errors
+* View Two blew up in previous version, inexplicably, and only in firebase hosting
+* Fixed now, by renaming(in bower_components) vaadin-combo-box/vaadin-combo-box.html to vaadin-combo-box/vaadin-combo-bux.html or really to anything other than vaadin-combo-box/vaadin-combo-box.html
+* in db-combo-box.html import must match same
+* works like a charm
 
-## How to test it and prove that it works fine not deployed to firebase
+This makes absolutely no sense, but since it's an easy fix and it also works in my own codebase, I'm proving this for vaadin's own usage and letting it go.
 
-* git clone project
-* run the refresh_npm.sh command to get it all loaded up
-* cd public
-* run bash command 'polymer serve'
-* navigate to app log in with google (optional)
-* click on View Two and notice that no error messages, drop down works
+# To replicate
 
-## Hoe to run it localhost and diagnose error
+* git clone project per usual
+* run  `refresh_npm.sh` bash command per usual
+* you will have to rename vaadin-combo-box/vaadin-combo-box.html to something else and then make sure matches with import in db-combo-box.html
 
-* git clone project
-* run the refresh_npm.sh command to get it all loaded up
-* run bash command 'firebase serve'
-* navigate to localhost:5000 or whatever it is
-* see above ^ notice that it errors same as https://df-lab.firebaseapp.com/
+# How to simulate firebase hosting
+
+* in root of project
+* you have already run the `refresh_npm.sh` bash command
+* run the `firebase serve` bash command
+* should be visible in localhost:5000
